@@ -52,3 +52,16 @@ app-header {
   width: 100%;
   z-index: 100;
 }
+
+
+[id] {
+  position: relative;
+}
+
+[id]::before {
+  content: "";
+  display: block;
+  height: 80px;           /* высота шапки */
+  margin-top: -80px;      /* компенсирует поднятие */
+  visibility: hidden;
+}
