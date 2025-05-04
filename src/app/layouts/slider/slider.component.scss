@@ -149,3 +149,19 @@
     }
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: none;
+  border: transparent
+}
+
