@@ -1,0 +1,141 @@
+.founders-section {
+  display: flex;
+  width: 100%;
+  min-height: 600px;
+}
+
+.founders-text {
+  flex: 1;
+  background: #1f2a26;
+  color: #fff;
+  padding: 60px;
+  box-sizing: border-box;
+}
+.founders-text .title {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.founders-text .description {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.founders-images {
+  padding: 20px;
+  gap: 15px;
+  flex: 1;
+  background: #fcbc03;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+.founder-card img {
+  display: block;
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1 .name {
+  right: -40px;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.card2 {
+  align-self: flex-start;
+}
+.card2 .name {
+  right: -40px;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.card3 {
+  align-self: center;
+}
+
+.card3 .name {
+  left: -40px;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+@media (max-width: 1024px) {
+  .founders-section {
+    flex-direction: column;
+  }
+
+  .founders-text {
+    padding: 40px 30px;
+    text-align: center;
+
+    .title {
+      font-size: 28px;
+    }
+
+    .description {
+      font-size: 15px;
+    }
+  }
+
+  .founders-images {
+    padding: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card{
+    gap: 20px;
+  }
+  .founder-card {
+    align-self: center !important;
+
+    img {
+      width: 150px;
+    }
+
+  }
+}
+
+@media (max-width: 600px) {
+  .founders-text {
+    padding: 30px 20px;
+
+    .title {
+      font-size: 24px;
+    }
+
+    .description {
+      font-size: 14px;
+    }
+  }
+
+  .founders-images {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .founder-card img {
+    width: 120px;
+  }
+
+  .founder-card .name {
+    font-size: 13px;
+  }
+}
+.card{
+  display: flex;
+  justify-content: space-between
+}
+.founder-card img:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}

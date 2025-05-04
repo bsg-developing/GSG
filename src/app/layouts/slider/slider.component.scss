@@ -1,0 +1,151 @@
+.fullpage-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  scroll-snap-align: start;
+
+  .left-image {
+    flex: 1;
+    background-image: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .right-content {
+    flex: 1;
+    background: white;
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .label {
+      font-size: 0.8rem;
+      color: #FDBB1C;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: #FDBB1C;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+
+.scroll-nav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+      width: 25px;
+      height: 25px;
+      border: 1px solid #999;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      cursor: pointer;
+      color: #333;
+      transition: all 0.3s ease;
+
+      &.active {
+        background-color: #FDBB1C;
+        border-color: #FDBB1C;
+        color: white;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .section {
+    flex-direction: column;
+
+    .left-image {
+      width: 100%;
+      height: 40vh;
+    }
+
+    .right-content {
+      width: 100%;
+      height: 60vh;
+      padding: 40px 20px;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      button {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  }
+
+  .scroll-nav {
+    right: 10px;
+
+    ul li {
+      width: 18px;
+      height: 18px;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .right-content {
+    padding: 30px 15px;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    button {
+      font-size: 0.9rem;
+      padding: 12px 24px;
+    }
+  }
+}

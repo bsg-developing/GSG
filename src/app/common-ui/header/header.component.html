@@ -1,0 +1,31 @@
+
+<header class="main-header">
+  <div class="nav-container">
+    <div class="burger" (click)="toggleMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <img src="assets/logo GEO--01.svg" alt="logo" class="logo-mobile" />
+
+    <ul class="nav-list" [class.open]="menuOpen">
+      <li (click)="router.navigate(['/'], { fragment: 'main' })"><span (click)="closeMenu()">Home</span></li>
+      <li (click)="router.navigate(['/'], { fragment: 'about-us' })"><span (click)="closeMenu()">Despre noi</span></li>
+      <li (click)="router.navigate(['/'], { fragment: 'team' })"><span (click)="closeMenu()">Parteneri</span></li>
+      <li class="logo-item" (click)="router.navigate(['/'], { fragment: 'main' })">
+        <img src="assets/logo GEO--01.svg" alt="logo" class="logo" (click)="closeMenu()" />
+      </li>
+      <li (click)="router.navigate(['/'], { fragment: 'products' })"><span (click)="closeMenu()">Servicii</span></li>
+      <li (click)="router.navigate(['/'], { fragment: 'slider' })"><span (click)="closeMenu()">Produse</span></li>
+      <li (click)="router.navigate(['/'], { fragment: 'contacts' })"><span (click)="closeMenu()">Contacte</span></li>
+    </ul>
+
+    <!-- селект языка -->
+    <select class="language-select">
+      <option value="ro">RO</option>
+      <option value="ru">RU</option>
+      <option value="en">EN</option>
+    </select>
+  </div>
+</header>

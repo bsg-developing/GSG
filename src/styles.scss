@@ -1,0 +1,54 @@
+@import "assets/css/normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Exo+2:wght@600;700&display=swap');
+
+:root{
+  --primary-color: #131314;
+  --secondary-color: #1E1F20;
+  --secondary-hover-color: #333537;
+
+  --focus-color: #282A2C;
+  --focus-hover-color: #37393B;
+
+  --button-hover-color: #2f3030;
+
+  --text-color: #fff;
+  --text-secondary-color: #D8D8D8;
+  --heading-secondary-color: #444746;
+  --placeholder-color: #ABAFB3;
+
+  --bg-color: #080808;
+  --second-bg-color: #131313;
+  --main-color: #00ffee;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.scrolltop-button {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%) !important;
+  color: #FFFFFF !important;
+}
+
+
+app-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
