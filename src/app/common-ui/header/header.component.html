@@ -1,9 +1,13 @@
 <header class="main-header">
   <div class="nav-container">
-    <div class="burger" (click)="toggleMenu()">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
+    <div class="burger" (click)="toggleMenu()" [class.open]="menuOpen">
+      @if (menuOpen) {
+        <i class="ri-close-line close-icon"></i>
+      } @else {
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      }
     </div>
 
     <img src="assets/logo GEO--01.svg" alt="logo" class="logo-mobile"/>
