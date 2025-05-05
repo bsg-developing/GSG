@@ -1,16 +1,11 @@
 import {Component, inject} from '@angular/core';
 import {Router} from '@angular/router';
-import {CommonModule} from '@angular/common';
 import {ClickOutsideDirective} from '../click-outside.directive';
 
 
 @Component({
   selector: 'app-header',
-  imports: [
-    CommonModule,
-    ClickOutsideDirective,
-    ClickOutsideDirective,
-  ],
+  imports: [ClickOutsideDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
