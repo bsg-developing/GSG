@@ -1,9 +1,19 @@
 
 .main-header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: transparent;
   padding: 15px 20px;
-  z-index: 100;
+  border: none;
+
+  transition:
+    background-color 0.5s ease-in-out;
+  &.scrolled {
+    transition:
+      background-color 0.5s ease-in-out,
+      box-shadow 0.7s ease-in-out;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
 
   .nav-container {
     display: flex;
@@ -30,7 +40,7 @@
 
     .nav-list {
       display: flex;
-      gap: 25px;
+      gap: 100px;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -42,6 +52,9 @@
 
         span {
           position: relative;
+          transition: color 0.3s ease;
+          font-size: 24px;
+          letter-spacing: 1px;
 
           &::after {
             content: "";
@@ -50,21 +63,26 @@
             bottom: -4px;
             width: 0;
             height: 2px;
-            background: #3ECFCF;
+            background: #FFBF36;
             transition: width 0.3s ease;
           }
 
           &:hover::after {
             width: 100%;
           }
+
+          &:hover {
+            color: #FFBF36;
+          }
         }
       }
+
 
       .logo-item {
         margin: 0 10px;
       }
       .logo-item .logo {
-        width: 100px;
+        width: 200px;
         height: auto;
         display: block;
       }
@@ -169,6 +187,7 @@
         transform: none !important;
         opacity: 1 !important;
         pointer-events: auto !important;
+        gap: 50px;
       }
     }
   }
@@ -188,18 +207,17 @@
   justify-content: center;
   color: var(--secondary-color);
   font-size: 1rem;
-  border-radius: 0.5rem;
+  background: transparent;
   padding: 0.4rem 0.8rem;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 
 
 .navbar__button i {
   margin-right: 0.3rem;
-  font-size: 1.2rem;
+  font-size: 24px;
 }
 
 

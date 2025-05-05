@@ -1,0 +1,80 @@
+.scroll-top {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60px;
+  background: #ccc;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2px;
+  z-index: 1000;
+}
+
+.scroll-top .progress {
+  display: block;
+  width: 100%;
+  background: #FFBF36;
+  height: 0;
+  transition: height 0.2s ease-out;
+  transform-origin: bottom;
+}
+
+.scroll-top  .label {
+  margin-bottom: 8px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #FFBF36;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+
+
+.scroll-top-wrapper {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.scroll-top {
+  width: 4px;
+  height: 60px;
+  background: #ccc;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2px;
+  position: relative;
+  pointer-events: auto;
+}
+
+.scroll-top .progress {
+  width: 100%;
+  height: 0;
+  background: #FFBF36;
+  transition: height 0.2s ease-out;
+  transform-origin: bottom;
+}
+
+.scroll-top-wrapper .label {
+  margin-bottom:50px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #FFBF36;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  /* Разрешаем клики по надписи (если нужно) */
+  pointer-events: auto;
+}

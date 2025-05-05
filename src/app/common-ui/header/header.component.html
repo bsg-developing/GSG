@@ -1,4 +1,4 @@
-<header class="main-header">
+<header class="main-header" [class.scrolled]="isScrolled">
   <div class="nav-container">
     <div class="burger" (click)="toggleMenu()">
       <div class="line"></div>
@@ -20,25 +20,25 @@
       <li (click)="router.navigate(['/'], { fragment: 'contacts' })"><span (click)="closeMenu()">Contacte</span></li>
     </ul>
 
-<!--    <select class="language-select">
-      <option *ngFor="let language of languages">
-        <img [src]="language.flag" alt="{{ language.name }}" class="flag-icon">
-        {{ language.name }}
-      </option>
-    </select>-->
-    <!-- app.component.html -->
-    <div class="language-container">
-      <button class="navbar__button" (click)="toggleLanguageDropdown()">
+    <div class="language-container"
+         (click)="toggleLanguageDropdown()"
+         appClickOutside
+         (clickOutside)="dropdownVisible = false">
+      <button class="navbar__button">
         <i class="ri-global-line"></i>
         <span class="language-text">{{ selectedLanguage | uppercase }}</span>
       </button>
+
       <div class="language-options" *ngIf="dropdownVisible">
         <button *ngFor="let language of languages">
-          <img [src]="language.flag" alt="{{ language.name }}" class="flag-icon">
+          <img [src]="language.flag"
+               alt="{{ language.name }}"
+               class="flag-icon">
           {{ language.name }}
         </button>
       </div>
     </div>
+
 
   </div>
 </header>

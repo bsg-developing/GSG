@@ -36,22 +36,24 @@ html, body {
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 
 .scrolltop-button {
   background: linear-gradient(135deg, #232526 0%, #414345 100%) !important;
   color: #FFFFFF !important;
 }
-
-
 app-header {
   position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 100;
+  z-index: 1000;       /* чтобы хедер был поверх всего остального */
+  margin-top: 100vh;   /* сдвигаем вниз ровно на высоту экрана */
 }
+
+
 
 
 [id] {
@@ -61,10 +63,30 @@ app-header {
 [id]::before {
   content: "";
   display: block;
-  height: 80px;           /* высота шапки */
-  margin-top: -80px;      /* компенсирует поднятие */
+  height: 80px;
+  margin-top: -80px;
   visibility: hidden;
 }
 
 
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
 
+#main {
+  min-height: 100vh;
+}
+
+app-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin-top: 100vh;        /* <-- вот этот отступ */
+  z-index: 1000 !important; /* чтобы он был поверх остального */
+}
