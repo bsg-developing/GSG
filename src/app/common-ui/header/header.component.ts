@@ -1,6 +1,6 @@
-import {Component, HostListener, inject, OnInit} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {Router} from '@angular/router';
-import {CommonModule, ViewportScroller} from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {ClickOutsideDirective} from '../click-outside.directive';
 
 
@@ -14,7 +14,7 @@ import {ClickOutsideDirective} from '../click-outside.directive';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   public menuOpen = false;
   languages: Language[] = [
     {code: 'en', name: 'English', flag: 'https://flagcdn.com/w40/gb.png'},
@@ -24,14 +24,13 @@ export class HeaderComponent implements OnInit {
   public selectedLanguage!: string;
   public dropdownVisible: boolean = false;
   public router = inject(Router);
-  public isScrolled = false;
-  private viewportScroller = inject(ViewportScroller);
 
-  toggleMenu() {
+
+  public toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
 
-  closeMenu() {
+  public closeMenu() {
     this.menuOpen = false;
   }
 
@@ -39,20 +38,9 @@ export class HeaderComponent implements OnInit {
     this.dropdownVisible = !this.dropdownVisible;
   }
 
-  ngOnInit() {
-    this.checkScroll();
-  }
-
-  setLang(lang: string) {
+  public setLang(lang: string) {
     console.log('Selected lang:', lang);
 
-  }
-
-  @HostListener('window:scroll')
-  checkScroll() {
-    const [, y] = this.viewportScroller.getScrollPosition();
-    this.isScrolled = y > 880;
-    console.log('scrollY =', y, ' → isScrolled =', this.isScrolled);
   }
 }
 
