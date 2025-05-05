@@ -1,26 +1,11 @@
 
 .main-header {
-  background: transparent;
+  background: #F2F1EF;
   padding: 15px 20px;
   border: none;
+  z-index: 100;
 
-  transition:
-    background-color 0.5s ease-in-out;
-  &.scrolled {
-    transition:
-      background-color 0.5s ease-in-out,
-      box-shadow 0.7s ease-in-out;
-    background: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    .nav-list{
-      li{
-        span {
-          color: black!important;
-        }
-      }
-     }
 
-  }
 
 
   .nav-container {
@@ -63,7 +48,7 @@
           transition: color 0.3s ease;
           font-size: 24px;
           letter-spacing: 1px;
-          color: #FFFFFF;
+          color: black;
 
           &::after {
             content: "";
@@ -112,16 +97,12 @@
       padding: 6px 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
-      background: white;
+      background: #F2F1EF;
       font-weight: 600;
       font-size: 14px;
       cursor: pointer;
       transition: border-color 0.3s;
       z-index: 200;
-
-      &:hover {
-        border-color: #3ECFCF;
-      }
     }
   }
 }
@@ -151,7 +132,7 @@
         right: 0;
         flex-direction: column;
         align-items: center;
-        background: #fff;
+        background: #F2F1EF;
         text-align: center;
         gap: 20px;
         padding: 20px 0;
@@ -238,7 +219,7 @@
   position: absolute;
   top: 100%;
   left: -27px;
-  background-color: var(--text-color);
+  background-color: #F2F1EF;
   color: black;
   padding: 5px;
   border-radius: 5px;

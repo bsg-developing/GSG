@@ -1,5 +1,5 @@
 .site-footer {
-  background-color: #142923; /* тёмно-зелёный фон */
+  background-color: #142923;
   color: #ffffff;
   padding: 60px 30px 30px;
   font-family: sans-serif;
@@ -18,7 +18,7 @@
 }
 
 .footer-info .logo img {
-  width: 120px;
+  width: 250px;
   margin-bottom: 20px;
 }
 
@@ -47,6 +47,7 @@
 
 .contact-label {
   font-size: 14px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   opacity: 0.7;
   margin-bottom: 8px;
@@ -78,22 +79,25 @@
   min-width: 200px;
 }
 
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+@media screen and (max-width: 768px) {
+  .footer-top {
+
+    justify-content: center;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+  .footer-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-contacts {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
-.social-icons .icon img {
-  display: block;
-  width: 24px;
-  height: 24px;
-}
-
-/*.social-icons .icon.calculator img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  padding: 8px;
-}*/
