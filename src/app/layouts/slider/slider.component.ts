@@ -1,29 +1,44 @@
-import {Component} from '@angular/core';
-
+import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-slider',
-  imports: [],
   templateUrl: './slider.component.html',
-  styleUrl: './slider.component.scss'
+  imports: [
+    NgForOf
+  ],
+  styleUrls: ['./slider.component.scss']
 })
-export class SliderComponent {
+export class SliderComponent implements AfterViewInit {
+  @ViewChild('container', { static: true }) container!: ElementRef<HTMLDivElement>;
   sections = ['section1', 'section2', 'section3'];
   currentSection = 0;
 
+  ngAfterViewInit() {
+    this.onScroll();
+  }
+
   scrollToSection(index: number) {
-    const element = document.getElementById(this.sections[index]);
-    if (element) {
-      element.scrollIntoView({behavior: 'smooth'});
+    const el = document.getElementById(this.sections[index]);
+    if (el) {
+      this.container.nativeElement.scrollTo({
+        top: el.offsetTop,
+        behavior: 'smooth'
+      });
     }
   }
 
   onScroll() {
-    const offsets = this.sections.map(id => {
-      const el = document.getElementById(id);
-      return el ? el.getBoundingClientRect().top : Infinity;
+    const { scrollTop, clientHeight } = this.container.nativeElement;
+    const center = scrollTop + clientHeight / 2;
+
+    const distances = this.sections.map(id => {
+      const el = document.getElementById(id)!;
+      const mid = el.offsetTop + el.offsetHeight / 2;
+      return Math.abs(mid - center);
     });
 
-    this.currentSection = offsets.findIndex(offset => offset > -100 && offset < window.innerHeight / 2);
+    this.currentSection = distances.indexOf(Math.min(...distances));
   }
 }
+

@@ -11,7 +11,7 @@ import {ScrollTopComponent} from './common-ui/scroll-top/scroll-top.component';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, AboutUsComponent, MainComponent, FooterComponent, TeamComponent, ProductsComponent, SliderComponent, NgxScrollTopComponent, ScrollTopComponent],
+  imports: [HeaderComponent, AboutUsComponent, MainComponent, FooterComponent, TeamComponent, ProductsComponent, SliderComponent, ScrollTopComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

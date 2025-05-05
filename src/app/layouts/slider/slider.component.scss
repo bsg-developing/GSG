@@ -1,7 +1,9 @@
+/*
 .fullpage-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  position: relative;
 }
 
 .section {
@@ -55,16 +57,19 @@
 }
 
 .scroll-nav {
-  position: fixed;
-  right: 20px;
+  position: absolute;      !* Лежит внутри .fullpage-container *!
   top: 50%;
+  right: 20px;
   transform: translateY(-50%);
-  z-index: 999;
+  z-index: 10;
 
   ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
     li {
       width: 25px;
@@ -74,10 +79,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
       cursor: pointer;
-      color: #333;
-      transition: all 0.3s ease;
+      transition: all 0.3s;
 
       &.active {
         background-color: #FDBB1C;
@@ -87,6 +90,7 @@
     }
   }
 }
+
 
 
 @media (max-width: 1024px) {
@@ -117,16 +121,6 @@
         width: 100%;
         max-width: 250px;
       }
-    }
-  }
-
-  .scroll-nav {
-    right: 10px;
-
-    ul li {
-      width: 18px;
-      height: 18px;
-      font-size: 0.7rem;
     }
   }
 }
@@ -165,3 +159,135 @@
   border: transparent
 }
 
+
+*/
+.fullpage-container {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  scroll-snap-align: start;
+
+  .left-image {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0') center/cover no-repeat;
+  }
+
+  .right-content {
+    flex: 1;
+    background: #fff;
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .label {
+      font-size: 0.8rem;
+      color: #FDBB1C;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: #FDBB1C;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+
+.scroll-nav {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      width: 25px;
+      height: 25px;
+      border: 1px solid #999;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &.active {
+        background-color: #FDBB1C;
+        border-color: #FDBB1C;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+  .section {
+    flex-direction: column;
+
+    .left-image { height: 40vh; }
+    .right-content {
+      height: 60vh;
+      padding: 40px 20px;
+      align-items: center;
+      text-align: center;
+
+      h2 { font-size: 2rem; }
+      p { font-size: 1rem; }
+      button { width: 100%; max-width: 250px; }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .right-content {
+    padding: 30px 15px;
+
+    h2 { font-size: 1.8rem; }
+    p { font-size: 0.95rem; }
+    button { font-size: 0.9rem; padding: 12px 24px; }
+  }
+}
+
+/* Скроллбар, если нужен */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}

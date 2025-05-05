@@ -15,18 +15,17 @@ import {ClickOutsideDirective} from '../click-outside.directive';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
- public  menuOpen = false;
+  public menuOpen = false;
   languages: Language[] = [
-    { code: 'en', name: 'English',  flag: 'https://flagcdn.com/w40/gb.png' },
-    { code: 'ru', name: 'Русский',  flag: 'https://flagcdn.com/w40/ru.png' },
-    { code: 'ro', name: 'Română',    flag: 'https://flagcdn.com/w40/ro.png' },
+    {code: 'en', name: 'English', flag: 'https://flagcdn.com/w40/gb.png'},
+    {code: 'ru', name: 'Русский', flag: 'https://flagcdn.com/w40/ru.png'},
+    {code: 'ro', name: 'Română', flag: 'https://flagcdn.com/w40/ro.png'},
   ];
   public selectedLanguage!: string;
   public dropdownVisible: boolean = false;
-
-  constructor(private viewportScroller: ViewportScroller) {}
-
-  router = inject(Router);
+  public router = inject(Router);
+  public isScrolled = false;
+  private viewportScroller = inject(ViewportScroller);
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -35,12 +34,12 @@ export class HeaderComponent implements OnInit {
   closeMenu() {
     this.menuOpen = false;
   }
+
   public toggleLanguageDropdown() {
     this.dropdownVisible = !this.dropdownVisible;
   }
 
   ngOnInit() {
-    // сразу проверяем, вдруг страница уже прокручена (например, по якорю)
     this.checkScroll();
   }
 
@@ -48,13 +47,12 @@ export class HeaderComponent implements OnInit {
     console.log('Selected lang:', lang);
 
   }
-  isScrolled = false;
 
   @HostListener('window:scroll')
   checkScroll() {
     const [, y] = this.viewportScroller.getScrollPosition();
     this.isScrolled = y > 880;
-     console.log('scrollY =', y, ' → isScrolled =', this.isScrolled);
+    console.log('scrollY =', y, ' → isScrolled =', this.isScrolled);
   }
 }
 
