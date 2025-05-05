@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  gsg-site:
+    container_name: gsg-site
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: always
