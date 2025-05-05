@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build gsg --configuration production",
+    "build:ssr": "ng build gsg && ng run gsg:server:production",
+    "serve:ssr": "node dist/gsg/server/server.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:client": "node dist/client/server/server.mjs"

@@ -1,22 +1,20 @@
-# Stage 1: Build Angular app
-FROM node:18-alpine AS builder
+FROM node:18-alpine
 
+# Устанавливаем рабочую директорию
 WORKDIR /app
 
+# Копируем зависимости и устанавливаем
 COPY package*.json ./
 RUN npm install
 
+# Копируем всё остальное
 COPY . .
-RUN npm run build --configuration production
 
-# Stage 2: Serve with nginx
-FROM nginx:alpine
+# Билдим SSR-приложение
+RUN npm run build:ssr
 
-# Удаляем дефолтный nginx конфиг
-RUN rm /etc/nginx/conf.d/default.conf
+# Контейнер слушает порт SSR-сервера
+EXPOSE 4000
 
-# Копируем наш конфиг
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Копируем билд из предыдущего этапа
-COPY --from=builder /app/dist/gsg /usr/share/nginx/html
+# Запускаем SSR-сервер
+CMD ["node", "dist/gsg/server/server.mjs"]
