@@ -22,8 +22,8 @@
 }
 
 *{
-  margin: 0;
-  padding: 0;
+/*  margin: 0;
+  padding: 0;*/
   outline: none;
   box-sizing: border-box;
   font-family: 'Exo 2', sans-serif;
@@ -38,7 +38,7 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding-top: 70px!important;
 }
 
 
@@ -46,15 +46,6 @@ body {
   background: linear-gradient(135deg, #232526 0%, #414345 100%) !important;
   color: #FFFFFF !important;
 }
-app-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;       /* чтобы хедер был поверх всего остального */
-  margin-top: 100vh;   /* сдвигаем вниз ровно на высоту экрана */
-}
-
-
-
 
 [id] {
   position: relative;
@@ -63,10 +54,30 @@ app-header {
 [id]::before {
   content: "";
   display: block;
-  height: 80px;
-  margin-top: -80px;
+
   visibility: hidden;
 }
+
+app-about-us::before{
+  height: 80px;
+}
+
+app-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  background: url(https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover no-repeat;
+}
+
 
 
 body::before {
@@ -76,17 +87,15 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  background: rgba(0, 128, 128, 0.6);
 }
 
-#main {
-  min-height: 100vh;
-}
 
-app-header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  margin-top: 100vh;        /* <-- вот этот отступ */
-  z-index: 1000 !important; /* чтобы он был поверх остального */
+
+
+@media (max-width: 769px) {
+  app-about-us::before{
+    height: 40px;
+  }
+
 }
