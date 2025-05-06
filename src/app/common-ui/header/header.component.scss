@@ -192,7 +192,10 @@
         }
       }
     }
-  }
+    .navbar__button {
+      padding: 0.4rem 10px!important;
+    }
+    }
 
   .language-options {
     left: 30px!important;
