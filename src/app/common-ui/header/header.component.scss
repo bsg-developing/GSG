@@ -1,3 +1,10 @@
+.main-header,
+.main-header .nav-container,
+.main-header .language-container {
+  position: relative;
+  overflow: visible !important;
+}
+
 .main-header {
   background: #F2F1EF;
   padding: 0 20px;
@@ -159,7 +166,7 @@
         display: block;
         top: -55px;
         left: 23%;
-        width: 250px;
+        width: 238px;
       }
 
       .nav-list {
@@ -223,3 +230,20 @@
 .burger.open .line1 { top: 14px; transform: rotate(45deg); }
 .burger.open .line2 { opacity: 0; }
 .burger.open .line3 { top: 14px; transform: rotate(-45deg); }
+
+
+.navbar__button,
+.navbar__button i,
+.navbar__button .language-text {
+  color: #000 !important;
+}
+
+
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .main-header .nav-container,
+    .main-header .language-container {
+      overflow: visible;
+    }
+  }
+}
