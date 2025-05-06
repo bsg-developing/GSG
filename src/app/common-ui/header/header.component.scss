@@ -120,13 +120,13 @@
       .language-options {
         position: absolute;
         top: 100%;
-        left: 0;
+        left: -40px;
         background: #F2F1EF;
         padding: 5px;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: 10px;
         margin-top: 5px;
         min-width: 120px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -188,7 +188,7 @@
   }
 
   .language-options {
-    left: 50%;
+    left: 30px!important;
     transform: translateX(-50%);
   }
 }
