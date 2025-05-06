@@ -84,7 +84,6 @@
       (click)="router.navigate(['/'], { fragment: 'main' }); closeMenu()"
     />
 
-    <!-- Список навигации -->
     <ul class="nav-list" [class.open]="menuOpen">
       <li (click)="router.navigate(['/'], { fragment: 'main' }); closeMenu()">
         <span>Home</span>
@@ -106,7 +105,6 @@
       </li>
     </ul>
 
-    <!-- Переключатель языка -->
     <div
       class="language-container"
       (click)="toggleLanguageDropdown(); $event.stopPropagation()"
