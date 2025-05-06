@@ -1,3 +1,4 @@
+<!--
 <header class="main-header">
   <div class="nav-container">
     <div class="burger" (click)="toggleMenu()" [class.open]="menuOpen">
@@ -10,19 +11,19 @@
       }
     </div>
 
-    <img src="assets/logo GEO--01.svg" alt="logo" class="logo-mobile"/>
+    <img src="assets/logo GEO&#45;&#45;01.svg" alt="logo" class="logo-mobile"/>
 
     <ul class="nav-list" [class.open]="menuOpen">
       <li (click)="router.navigate(['/'], { fragment: 'main' })"><span (click)="closeMenu()">Home</span></li>
-      <li (click)="router.navigate(['/'], { fragment: 'products' })"><span (click)="closeMenu()">Servicii</span></li>
-      <li (click)="router.navigate(['/'], { fragment: 'slider' })"><span (click)="closeMenu()">Produse</span></li>
+      <li (click)="router.navigate(['/'], { fragment: 'products' })"><span (click)="closeMenu()">{{'services'| transloco}}</span></li>
+      <li (click)="router.navigate(['/'], { fragment: 'slider' })"><span (click)="closeMenu()">{{'products'| transloco}}</span></li>
 
       <li class="logo-item" (click)="router.navigate(['/'], { fragment: 'main' })">
         <img src="assets/images/logo.svg" alt="logo" class="logo" (click)="closeMenu()"/>
       </li>
-      <li (click)="router.navigate(['/'], { fragment: 'about-us' })"><span (click)="closeMenu()">Despre noi</span></li>
-      <li (click)="router.navigate(['/'], { fragment: 'team' })"><span (click)="closeMenu()">Parteneri</span></li>
-      <li (click)="router.navigate(['/'], { fragment: 'contacts' })"><span (click)="closeMenu()">Contacte</span></li>
+      <li (click)="router.navigate(['/'], { fragment: 'about-us' })"><span (click)="closeMenu()">{{'about-us'| transloco}}</span></li>
+      <li (click)="router.navigate(['/'], { fragment: 'team' })"><span (click)="closeMenu()">{{'partners'| transloco}}</span></li>
+      <li (click)="router.navigate(['/'], { fragment: 'contacts' })"><span (click)="closeMenu()">{{'contacts'| transloco}}</span></li>
     </ul>
 
     <div class="language-container"
@@ -31,13 +32,13 @@
          (clickOutside)="dropdownVisible = false">
       <button class="navbar__button">
         <i class="ri-global-line"></i>
-        <span class="language-text">{{ selectedLanguage}}</span>
+        <span class="language-text">{{ selectedLanguage| uppercase}}</span>
       </button>
 
       @if(dropdownVisible){
         <div class="language-options">
           @for (language of languages; track language) {
-            <button>
+            <button (click)="setLang(language.code)">
               <img [src]="language.flag"
                    alt="{{ language.name }}"
                    class="flag-icon">
@@ -47,5 +48,90 @@
         </div>
       }
     </div>
+  </div>
+</header>
+-->
+
+
+<header class="main-header">
+  <div class="nav-container">
+
+    <!-- Бургер для мобильной версии -->
+    <div class="burger" (click)="toggleMenu()" [class.open]="menuOpen">
+      <ng-container *ngIf="menuOpen; else burgerLines">
+        <i class="ri-close-line close-icon"></i>
+      </ng-container>
+      <ng-template #burgerLines>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </ng-template>
+    </div>
+
+    <!-- Логотип для десктопа -->
+    <img
+      src="assets/images/logo.svg"
+      alt="logo"
+      class="logo-desktop"
+      (click)="router.navigate(['/'], { fragment: 'main' }); closeMenu()"
+    />
+
+    <!-- Мобильный логотип (появляется только на мобилках) -->
+    <img
+      src="assets/logo GEO--01.svg"
+      alt="logo"
+      class="logo-mobile"
+      (click)="router.navigate(['/'], { fragment: 'main' }); closeMenu()"
+    />
+
+    <!-- Список навигации -->
+    <ul class="nav-list" [class.open]="menuOpen">
+      <li (click)="router.navigate(['/'], { fragment: 'main' }); closeMenu()">
+        <span>Home</span>
+      </li>
+      <li (click)="router.navigate(['/'], { fragment: 'services' }); closeMenu()">
+        <span>{{ 'services' | transloco }}</span>
+      </li>
+      <li (click)="router.navigate(['/'], { fragment: 'products' }); closeMenu()">
+        <span>{{ 'products' | transloco }}</span>
+      </li>
+      <li (click)="router.navigate(['/'], { fragment: 'about-us' }); closeMenu()">
+        <span>{{ 'about-us' | transloco }}</span>
+      </li>
+      <li (click)="router.navigate(['/'], { fragment: 'partners' }); closeMenu()">
+        <span>{{ 'partners' | transloco }}</span>
+      </li>
+      <li (click)="router.navigate(['/'], { fragment: 'contacts' }); closeMenu()">
+        <span>{{ 'contacts' | transloco }}</span>
+      </li>
+    </ul>
+
+    <!-- Переключатель языка -->
+    <div
+      class="language-container"
+      (click)="toggleLanguageDropdown(); $event.stopPropagation()"
+      appClickOutside
+      (clickOutside)="dropdownVisible = false"
+    >
+      <button class="navbar__button">
+        <i class="ri-global-line"></i>
+        <span class="language-text">{{ selectedLanguage | uppercase }}</span>
+      </button>
+
+      <div *ngIf="dropdownVisible" class="language-options">
+        <button
+          *ngFor="let language of languages"
+          (click)="setLang(language.code)"
+        >
+          <img
+            [src]="language.flag"
+            [alt]="language.name"
+            class="flag-icon"
+          />
+          {{ language.name }}
+        </button>
+      </div>
+    </div>
+
   </div>
 </header>
