@@ -120,7 +120,7 @@
         <button
           *ngFor="let language of languages"
           (click)="setLang(language.code)"
-        >
+        class="lang-code">
           <img
             [src]="language.flag"
             [alt]="language.name"
