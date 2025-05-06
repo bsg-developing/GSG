@@ -7,6 +7,7 @@ import {provideTransloco} from '@jsverse/transloco';
 import {provideHttpClient} from '@angular/common/http';
 import {SwiperModule} from 'ngx-swiper-wrapper';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
+import {TranslocoHttpLoader} from './core/transloco-loader';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,13 +26,10 @@ export const appConfig: ApplicationConfig = {
         reRenderOnLangChange: true,
         prodMode: !isDevMode(),
       },
-/*
       loader: TranslocoHttpLoader,
-*/
     }),
     importProvidersFrom(SwiperModule),
     provideAnimationsAsync(),
-
     provideClientHydration(withEventReplay())
   ]
 };

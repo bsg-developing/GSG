@@ -1,11 +1,13 @@
 import {Component, inject} from '@angular/core';
 import {Router} from '@angular/router';
 import {ClickOutsideDirective} from '../click-outside.directive';
+import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
+import {NgForOf, NgIf, UpperCasePipe} from '@angular/common';
 
 
 @Component({
   selector: 'app-header',
-  imports: [ClickOutsideDirective],
+  imports: [ClickOutsideDirective, TranslocoPipe, UpperCasePipe, NgIf, NgForOf],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -19,8 +21,15 @@ export class HeaderComponent {
   public selectedLanguage!: string;
   public dropdownVisible: boolean = false;
   public router = inject(Router);
+  private translocateService = inject(TranslocoService);
 
-
+  constructor() {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const lang = localStorage.getItem('lang') || 'ro';
+      this.selectedLanguage = lang;
+      this.translocateService.setActiveLang(lang);
+    }
+  }
   public toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
@@ -34,8 +43,9 @@ export class HeaderComponent {
   }
 
   public setLang(lang: string) {
-    console.log('Selected lang:', lang);
-
+    this.translocateService.setActiveLang(lang);
+    this.selectedLanguage = lang;
+    localStorage.setItem('lang', lang);
   }
 }
 
