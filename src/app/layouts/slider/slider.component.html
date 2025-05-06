@@ -1,10 +1,8 @@
 <div #container class="fullpage-container" (scroll)="onScroll()">
-  <!-- Генерируем ваши три секции -->
   <section
     *ngFor="let sec of sections; let i = index"
     class="section"
-    [id]="sec"
-  >
+    [id]="sec">
     <div class="left-image"></div>
     <div class="right-content">
       <p class="label">OUR SERVICES</p>
@@ -19,7 +17,6 @@
     </div>
   </section>
 
-  <!-- Круглая навигация -->
 
 </div>
 <div class="scroll-nav">
