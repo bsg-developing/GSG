@@ -7,7 +7,10 @@
 
 .main-header {
   background: #F2F1EF;
+  /*
   padding: 0 20px;
+  */
+  padding-bottom: -20px;
   z-index: 100;
 
   .nav-container {
@@ -63,8 +66,8 @@
       display: flex;
       gap: 50px;
       list-style: none;
-      margin: 0;
       padding: 0;
+      margin-top: 85px;
 
       li {
         cursor: pointer;
@@ -75,8 +78,10 @@
           transition: color 0.3s ease;
           font-size: 18px;
           letter-spacing: 1px;
-          font-weight: 400!important;
+          font-weight: 500!important;
           color: black;
+          font-style: normal;
+          line-height: 22px;
 
           &::after {
             content: "";
@@ -105,13 +110,14 @@
       border: none;
       cursor: pointer;
       font-size: 1rem;
-      padding: 0.4rem 50px;
+      padding: 0.4rem 20px;
       z-index: 200;
+      margin-top: 85px;
 
       i {
         margin-right: 0.3rem;
         font-size: 18px;
-        font-weight: 400!important;
+        font-weight: 500!important;
       }
     }
 
@@ -172,7 +178,7 @@
 
       .nav-list {
         position: absolute;
-        top: 83px;
+        top: -5px;
         left: 0;
         right: 0;
         flex-direction: column;
@@ -195,6 +201,7 @@
     }
     .navbar__button {
       padding: 0.4rem 10px!important;
+      margin-top: 0!important;
     }
     }
 
