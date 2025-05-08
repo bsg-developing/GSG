@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import {animate, keyframes, style, transition, trigger} from '@angular/animations';
+import {TranslocoPipe} from '@jsverse/transloco';
 
 @Component({
   selector: 'app-main',
-  imports: [],
+  imports: [
+    TranslocoPipe
+  ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
   animations: [
