@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {animate, keyframes, style, transition, trigger} from '@angular/animations';
 import {TranslocoPipe} from '@jsverse/transloco';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -22,5 +23,6 @@ import {TranslocoPipe} from '@jsverse/transloco';
   ]
 })
 export class MainComponent {
+  public router = inject(Router);
 
 }

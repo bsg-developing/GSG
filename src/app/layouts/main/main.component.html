@@ -11,6 +11,6 @@
     </h1>
 
     <p>{{'subtitle'| transloco}}.</p>
-    <button class="hero-btn">Afla mai multe</button>
+    <button class="hero-btn" (click)="router.navigate(['/'], { fragment: 'slider' })">Afla mai multe</button>
   </div>
 </section>
