@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {animate, keyframes, style, transition, trigger} from '@angular/animations';
+import {TranslocoPipe} from '@jsverse/transloco';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-main',
-  imports: [],
+  imports: [
+    TranslocoPipe
+  ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
   animations: [
@@ -19,5 +23,6 @@ import {animate, keyframes, style, transition, trigger} from '@angular/animation
   ]
 })
 export class MainComponent {
+  public router = inject(Router);
 
 }
