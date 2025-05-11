@@ -1,120 +1,9 @@
-/*
-.hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 0 5%;
-  min-height: 84vh;
-  background: url('/assets/images/bg-img.jpg') center/cover no-repeat;
-  color: black;
-}
 
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  !*
-  background: rgba(0, 128, 128, 0.6);
-  *!
-  z-index: 1;
-}
-
-.hero__content {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-
-  h1 {
-    font-size: 4rem;
-    line-height: 1.2;
-    margin: 0;
-
-    span.highlight {
-      font-size: 4rem;
-    }
-  }
-}
-
-
-.hero__content p {
-  font-size: 1.8rem;
-  line-height: 1.5;
-}
-
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-  }
-  .hero__content h1 {
-    font-size: 2rem;
-
-    span.highlight {
-      font-size: 2rem;
-    }
-  }
-}
-.hero__content h1 span.highlight {
-  position: relative;
-  color: #fff;
-  z-index: 0;
-  padding: 0 5px;
-  overflow: hidden;
-}
-
-.hero__content h1 span.highlight::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #3ECFCF;
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: fillBackground 1s ease-out forwards;
-  animation-delay: 1s;
-  border-radius: 2px;
-}
-
-@keyframes fillBackground {
-  to {
-    transform: scaleX(1);
-  }
-}
-
-@media (min-width: 769px) {
-  .hero__content h1 {
-    font-size: 4rem;
-
-    span.highlight {
-      font-size: 4rem;
-    }
-  }
-}
-*/
-
-/*:root {
-  --text-color: #f2f2f2;
-  --subtext-color: #d0d0d0;
-  --highlight-color: #3ECFCF; !* Акцентный светлый цвет *!
+:root {
   --overlay-color: rgba(0, 0, 0, 0.6);
-}*/
+  --text-color: #f2f2f2;
+  --highlight-color: #3ECFCF;
+}
 
 .hero {
   position: relative;
@@ -125,58 +14,112 @@
   text-align: center;
   padding: 0 5%;
   min-height: 84vh;
-
   background:
     url('/assets/images/bg-img.jpg') center/cover no-repeat,
     var(--overlay-color);
   background-blend-mode: overlay;
   color: var(--text-color);
-}
 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
 
-.hero__content {
-  position: relative;
-  z-index: 2;
-  max-width: 985px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 985px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-.hero__content h1 {
-  font-size: 3rem;  /* уменьшено */
-  line-height: 1.2;
-  margin: 0;
-}
+    h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin: 0;
 
-.hero__content h1 span.highlight {
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 10px;
-  color: var(--text-color);
-  position: relative;
-  overflow: hidden;
-  margin-top: 20px;     /* <-- здесь настраиваете величину отступа */
-}
+      span.highlight {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0px;
+        margin-top: 20px;
+        position: relative;
+        overflow: hidden;
+        color: var(--text-color);
 
-.hero__content h1 span.highlight::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--highlight-color);
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: fillBackground 1s ease-out forwards;
-  animation-delay: 1s;
-  border-radius: 2px;
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-color: var(--highlight-color);
+          z-index: -1;
+          transform: scaleX(0);
+          transform-origin: left;
+          animation: fillBackground 1s ease-out forwards;
+          animation-delay: 1s;
+          border-radius: 2px;
+        }
+
+        .highlight__inner {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          .highlight__logo {
+            width: 60px;
+            background: #F2F1EF;
+            height: auto;
+            flex-shrink: 0;
+          }
+
+          .highlight__text {
+            font-size: inherit;
+            line-height: inherit;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 1.9rem;
+      line-height: 1.5;
+      color: var(--text-color);
+      margin: 0;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      width: 220px;
+      padding: 25px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-color);
+      background-color: var(--highlight-color);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.2s ease, filter 0.2s ease;
+      margin: 0.8rem auto;
+      text-align: center;
+
+      &:hover,
+      &:focus {
+        filter: brightness(0.9);
+        transform: scale(1.05);
+        outline: none;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
 }
 
 @keyframes fillBackground {
@@ -185,63 +128,41 @@
   }
 }
 
-.hero__content p {
-  font-size: 1.6rem;  /* уменьшено */
-  line-height: 1.5;
-  color: var(--subtext-color);
-  margin: 0;
-}
-
-.hero-btn {
-  display: inline-block;
-  width: 220px;
-  padding: 25px 0;       /* убрали горизонтальный padding */
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-color);
-  background-color: var(--highlight-color);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  transition: transform 0.2s ease, filter 0.2s ease;
-  margin: 0.8rem auto;
-  text-align: center;    /* чтобы текст был по центру */
-}
-
-
-.hero-btn:hover,
-.hero-btn:focus {
-  filter: brightness(0.9);
-  transform: scale(1.05);
-  outline: none;
-}
-
-.hero-btn:active {
-  transform: scale(0.98);
-}
-
 @media (max-width: 768px) {
   .hero {
     padding: 20px;
   }
 
-  .hero__content h1 {
-    font-size: 1.8rem;  /* уменьшено для мобильных */
-  }
+  .hero__content {
+    h1 {
+      font-size: 1rem;
 
-  .hero-btn {
-    padding: 0.5rem 1rem; /* уменьшено для мобильных */
-    font-size: 1rem;      /* уменьшено для мобильных */
-    margin-top: 0.8rem;   /* уменьшено для мобильных */
+      span.highlight {
+        /* переключаемся на колоночный режим или разрешаем перенос */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;            /* уменьшаем промежуток */
+        margin-top: 12px;
+
+        /* уменьшаем размер логотипа */
+        .highlight__logo {
+          width: 40px;
+        }
+
+        /* подгоняем текст */
+        .highlight__text {
+          font-size: 1.2rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .hero-btn {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-top: 0.8rem;
+      width: auto;
+    }
   }
 }
-
-
-
-
-
-
-
-
