@@ -10,9 +10,18 @@
   display: flex;
   scroll-snap-align: start;
 
-  .left-image {
+/*  .left-image {
     flex: 1;
     background: center/contain no-repeat;
+  }*/
+  .left-image {
+    flex: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 0;
+    max-height: 100%; // 🔒 ограничение по высоте
+    width: 100%;
   }
 
   .right-content {
@@ -91,16 +100,37 @@
 @media (max-width: 1024px) {
   .section {
     flex-direction: column;
+    min-height: 100vh;
 
-    .left-image { height: 40vh; }
+/*    .left-image {
+      height: auto;
+      min-height: 40vh;
+      width: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+    }*/
+    .left-image {
+      height: 40vh;
+      max-height: 300px; // 🔒 не больше 300px
+      width: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+    }
+
     .right-content {
-      height: 60vh;
+      flex: 1;
       padding: 40px 20px;
       align-items: center;
       text-align: center;
+      width: 100%;
+      box-sizing: border-box;
 
-      h2 { font-size: 2rem; }
-      p { font-size: 1rem; }
+      h2 { font-size: 1.1rem; }
+      p { font-size: 0.7rem; }
       button { width: 100%; max-width: 250px; }
     }
   }
