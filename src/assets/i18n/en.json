@@ -5,5 +5,24 @@
   "partners": "Partners",
   "contacts": "Contacts",
   "title": "Innovation and success for our future",
-  "subtitle": "Smart technology and quality expertise for the success of your geological research projects, complete geothermal solutions, and drilling execution"
+  "subtitle": "Smart technology and quality expertise for the success of your geological research projects, complete geothermal solutions, and drilling execution",
+  "slider": {
+    "title1": "Geothermal Projects",
+    "text1": "- We focus on delivering integrated and customized geothermal projects to meet the specific requirements of various industrial sectors.\nWe are committed to offering you the ultimate home comfort while helping you keep energy expenses to a minimum. Our strategy focuses on reducing energy costs, allowing you to live in a pleasant and comfortable environment without burdening your budget with high energy bills.",
+
+    "title2": "Continuous Core Geological Drilling",
+    "text2": "Continuous Core Geological Drilling provides accurate and representative samples of geological layers. Key advantages of our services include:\n\n* Surface drilling: Performed with specialized equipment ensuring quality and efficiency.\n\n* Rigorous monitoring: Adhering to the highest safety and precision standards at every stage.\n\n* Drilling log: An essential document that, through mapping, offers details on:\n\nThe composition and texture of the layers.\nMechanical properties of soil and rocks, depending on depth.\nDetailed geological interpretation of the data.\nThis drilling method is crucial for in-depth subsurface analysis and is used in geological, mining, and infrastructure projects. The drilling log ensures clear and complete documentation throughout the process.",
+
+    "title3": "Deep Water Well Drilling",
+    "text3": "*Our team has extensive experience in deep well drilling, offering complete solutions for access to potable and industrial water. Our services support industrial, agricultural, and residential projects by ensuring sustainable access to water sources.\n* Pumping Tests and Monitoring\nPumping tests are essential for evaluating the performance of a well and groundwater supply systems. They provide information about\nsustainable flow rate, hydraulic conductivity, and groundwater behavior.",
+
+    "title4": "Drilling",
+    "text4": "We offer a complete range of drilling solutions, each specifically tailored to meet client requirements, ensuring that every energy need is addressed efficiently using the appropriate technology and equipment.",
+
+    "title5": "Human Resources",
+    "text5": "We provide the most qualified and competent specialists, carefully selected to perfectly match the specific requirements of each individual project, ensuring exceptional expertise and personalized solutions for every unique endeavor.",
+
+    "title6": "Consulting",
+    "text6": "We offer comprehensive support for every type of project, covering all stages from initial design and planning to full operational implementation. Our services ensure smooth execution and successful implementation tailored to each project's specific needs."
+  }
 }
