@@ -1,31 +1,25 @@
 <div #container class="fullpage-container" (scroll)="onScroll()">
   <section
-    *ngFor="let sec of sections; let i = index"
+    *ngFor="let slide of slides; let i = index"
     class="section"
-    [id]="sec">
-    <div class="left-image"></div>
+    [id]="slide.id">
+
+    <div class="left-image" [ngStyle]="{ 'background-image': 'url(' + slide.imageUrl + ')' }"></div>
+
     <div class="right-content">
-      <p class="label">OUR SERVICES</p>
-      <h2>
-        {{ i === 0 ? 'Industrial' : i === 1 ? 'Commercial' : 'Test' }}
-      </h2>
-      <p>
-        {{ i === 0
-        ? 'We focus on providing integrated and customized geothermal projects to meet the specific requirements of different industrial sectors.'
-        : 'Smart energy solutions for commercial applications.' }}
-      </p>
+      <p class="label">{{'ourServices' | transloco}}</p>
+      <h2>{{ slide.titleKey | transloco }}</h2>
+      <p>{{ slide.textKey | transloco }}</p>
     </div>
   </section>
-
-
 </div>
+
 <div class="scroll-nav">
   <ul>
     <li
-      *ngFor="let sec of sections; let i = index"
+      *ngFor="let slide of slides; let i = index"
       [class.active]="i === currentSection"
-      (click)="scrollToSection(i)"
-    >
+      (click)="scrollToSection(i)">
       {{ i + 1 }}
     </li>
   </ul>

@@ -5,5 +5,20 @@
   "partners": "Parteneri",
   "contacts": "Contacte",
   "title": "Inovație și succes pentru viitorul nostru",
-  "subtitle": "Tehnologie inteligentă și expertiză de calitate pentru succesul proiectelor tale de cercetare geologică, soluții geotermale complete și execuție de foraje"
+  "subtitle": "Tehnologie inteligentă și expertiză de calitate pentru succesul proiectelor tale de cercetare geologică, soluții geotermale complete și execuție de foraje",
+  "slider": {
+    "title1": "Proiecte Geotermale",
+    "text1": "- Ne concentrăm pe furnizarea de proiecte geotermale integrate si personalizate, pentru a îndeplini cerințele specifice ale diferitelor sectoare industriale.\nNe asumăm angajamentul de a vă oferi confortul suprem în locuința dumneavoastră, în timp ce vă ajutăm să mențineți cheltuielile cu energia la un nivel minim. Strategia noastră se axează pe reducerea costurilor energetice, garantându-vă posibilitatea de a trăi într-un mediu confortabil și plăcut, fără a vă îngreuna bugetul cu facturi excesive la energie.",
+    "title2": " Foraje Geologice în Carotaj Continuu",
+    "text2": " - Forajele Geologice în Carotaj Continuu, furnizează mostre precise și reprezentative ale straturilor geologice. Principalele avantaje ale serviciilor noastre includ:\n\n* Foraje de suprafață: Efectuate cu echipamente speciale asigurând calitate și eficiență.\n\n* Monitorizarea riguroasă a procesului: Respectarea celor mai înalte standarde de siguranță și precizie la fiecare etapă.\n\n* Fișa forajului: Document esențial care oferă prin cartarea forajului detalii despre:\n\nCompoziția și textura straturilor.\nCaracteristicile mecanice ale solului și rocilor, în funcție de adâncime.\nInterpretarea geologică detaliată a datelor.\nAceastă tehnică de foraj este crucială pentru analiza detaliată a subsolului, fiind utilizată în proiecte geologice, miniere și de infrastructură. Fișa forajului asigură o documentație clară și completă pentru toate etapele procesului.",
+    "title3": "Foraje de Apă de Mare Adâncime",
+    "text3": " - Foraje de Apă Echipanoastra are o vastă experiență în foraje de mare adâncime, oferind soluții complete pentru acces la resurse de apă potabilă și industrială. Serviciilenoastre susțin proiecte industriale, agricole și rezidențiale prin asigurarea unui acces sustenabil la sursele de apă.\n* Teste de Pompare și Monitorizare\nTestele de pompare sunt esențiale pentru evaluarea performanței unui puț și asistemelor de alimentare cu apă subterană. Acestea oferă informații despre\ndebitul sustenabil, conductivitatea hidraulică și comportamentul apeisubterane.",
+    "title4": "Drilling",
+    "text4": "- Oferimo gamă completă de soluții pentru foraje, fiecare adaptată în mod specific pentru a satisface cerințele clienților noștri, asigurând ca fiecare aspect alnecesarului energetic este abordat eficient in concordanta cu tehnologia și echipamentul de foraj potrivit.",
+    "title5": "Resurse Umane",
+    "text5": "- Punem la dispoziție cei mai calificați și competenți specialiști, selectați cu grijă pentru a se potrivi perfect cerințelor specifice ale fiecărui proiect individual, asigurând expertiză excepțională și soluții personalizate pentru fiecare demers unic.",
+    "title6": "Consultanță",
+    "text6": "- Oferim suport cuprinzător pentru fiecare tip de proiect acoperind toate etapele, de la faza inițială de proiectare și planificare până la implementarea operațională. Serviciile noastre asigură o execuție fără probleme și o implementare de succes adaptate cerințelor specifice ale fiecărui proiect."
+  },
+  "ourServices": "SERVICIILE NOASTRE"
 }
