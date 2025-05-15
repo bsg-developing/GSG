@@ -43,7 +43,7 @@ export class SliderComponent implements AfterViewInit {
     },
     {
       id: 'section5',
-      imageUrl: '/assets/images/slider/5.png',
+      imageUrl: '/assets/images/slider/11.png',
       titleKey: 'slider.title5',
       textKey: 'slider.text5'
     },
