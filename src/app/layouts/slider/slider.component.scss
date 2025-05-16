@@ -8,6 +8,7 @@
 .section {
   height: 100vh;
   display: flex;
+  flex-direction: row-reverse;
   scroll-snap-align: start;
 
   .left-image {
@@ -61,7 +62,7 @@
 .scroll-nav {
   position: absolute;
   top: 50%;
-  right: 20px;
+  left: 20px;
   transform: translateY(-50%);
   z-index: 10;
 
