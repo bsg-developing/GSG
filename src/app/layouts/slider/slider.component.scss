@@ -24,7 +24,7 @@
   .right-content {
     flex: 1;
     background: #fff;
-    padding: 100px 60px;
+    padding: 100px 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +62,7 @@
 .scroll-nav {
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 10px;
   transform: translateY(-50%);
   z-index: 10;
 
