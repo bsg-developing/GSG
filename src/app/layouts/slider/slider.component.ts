@@ -19,7 +19,7 @@ export class SliderComponent implements AfterViewInit {
   slides: Slide[] = [
     {
       id: 'section1',
-      imageUrl: '/assets/images/slider/2.png',
+      imageUrl: '/assets/images/slider/1.png',
       titleKey: 'slider.title1',
       textKey: 'slider.text1'
     },

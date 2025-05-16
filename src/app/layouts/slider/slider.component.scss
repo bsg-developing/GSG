@@ -10,17 +10,13 @@
   display: flex;
   scroll-snap-align: start;
 
-/*  .left-image {
-    flex: 1;
-    background: center/contain no-repeat;
-  }*/
   .left-image {
     flex: 1;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     min-height: 0;
-    max-height: 100%; // 🔒 ограничение по высоте
+    max-height: 100%;
     width: 100%;
   }
 
@@ -102,18 +98,9 @@
     flex-direction: column;
     min-height: 100vh;
 
-/*    .left-image {
-      height: auto;
-      min-height: 40vh;
-      width: 100%;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      flex-shrink: 0;
-    }*/
     .left-image {
       height: 40vh;
-      max-height: 300px; // 🔒 не больше 300px
+      max-height: 300px;
       width: 100%;
       background-size: contain;
       background-position: center;
