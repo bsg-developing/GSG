@@ -1,4 +1,10 @@
-import {ApplicationConfig, importProvidersFrom, isDevMode, provideZoneChangeDetection} from '@angular/core';
+import {
+  ApplicationConfig,
+  importProvidersFrom,
+  isDevMode, makeStateKey,
+  provideZoneChangeDetection,
+  TransferState
+} from '@angular/core';
 import {provideRouter, withInMemoryScrolling} from '@angular/router';
 
 import { routes } from './app.routes';
@@ -12,13 +18,25 @@ import {TranslocoHttpLoader} from './core/transloco-loader';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(
+    provideHttpClient(),
+    {
+      provide: 'TRANSFER_TRANSLATIONS',
+      useFactory: (ts: TransferState) => {
+        return {
+          set: (key: string, data: any) => ts.set(makeStateKey(key), data),
+          get: (key: string) => ts.get(makeStateKey(key), null)
+        };
+      },
+      deps: [TransferState]
+    },    provideRouter(
       routes,
       withInMemoryScrolling({
         anchorScrolling: 'enabled',
         scrollPositionRestoration: 'enabled'
       })),
+/*
     provideHttpClient(),
+*/
     provideTransloco({
       config: {
         availableLangs: ['en', 'ru', 'ro'],
