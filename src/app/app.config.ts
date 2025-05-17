@@ -34,15 +34,12 @@ export const appConfig: ApplicationConfig = {
         anchorScrolling: 'enabled',
         scrollPositionRestoration: 'enabled'
       })),
-/*
-    provideHttpClient(),
-*/
     provideTransloco({
       config: {
         availableLangs: ['en', 'ru', 'ro'],
-        defaultLang: 'en',
+        defaultLang: 'ro',
         reRenderOnLangChange: true,
-        prodMode: !isDevMode(),
+        prodMode: true,
       },
       loader: TranslocoHttpLoader,
     }),
