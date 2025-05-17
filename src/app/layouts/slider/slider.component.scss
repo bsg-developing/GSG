@@ -1,144 +1,72 @@
+
 .fullpage-container {
-  position: relative;
-  height: 100vh;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .section {
-  height: 100vh;
+  width: 85%;
   display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
   flex-direction: row-reverse;
-  scroll-snap-align: start;
-
-  .left-image {
-    flex: 1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    min-height: 0;
-    max-height: 100%;
-    width: 100%;
-  }
-
-  .right-content {
-    flex: 1;
-    background: #fff;
-    padding: 100px 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .label {
-      font-size: 0.8rem;
-      color: #FDBB1C;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 500px;
-    }
-
-    button {
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: #FDBB1C;
-      color: #fff;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  }
 }
 
-.scroll-nav {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  z-index: 10;
+.left-image {
+  flex: 1 1 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 200px;
+}
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.right-content {
+  flex: 2 1 300px;
+  background: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    li {
-      width: 25px;
-      height: 25px;
-      border: 1px solid #FDBB1C;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s;
-
-      &.active {
-        background-color: #FDBB1C;
-        border-color: #FDBB1C;
-        color: #fff;
-      }
-    }
-  }
+  .label { font-size: .8rem; color: #FDBB1C; text-transform: uppercase; margin-bottom: .5rem; }
+  h2     { font-size: 2rem;   margin-bottom: 1rem; }
+  p      { font-size: 1rem;   line-height: 1.5;   max-width: 600px; }
+  button { margin-top: 1.5rem; padding: 12px 24px; background: #FDBB1C; color: #fff; border: none; cursor: pointer; }
 }
 
 @media (max-width: 1024px) {
   .section {
     flex-direction: column;
-    min-height: 100vh;
+    gap: 20px;
+  }
 
-    .left-image {
-      height: 40vh;
-      max-height: 300px;
-      width: 100%;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      flex-shrink: 0;
-    }
+  .left-image,
+  .right-content {
+    flex: 1 1 auto;
+    width: 100%;
+  }
 
-    .right-content {
-      flex: 1;
-      padding: 40px 20px 100px;
-      align-items: center;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
+  .right-content {
+    padding: 20px;
+    text-align: center;
 
-      h2 { font-size: 1.1rem; }
-      p { font-size: 0.7rem; }
-      button { width: 100%; max-width: 250px; }
-    }
+    h2 { font-size: 1.5rem; }
+    p  { font-size: .9rem; }
+    button { width: 100%; max-width: 240px; }
   }
 }
 
 @media (max-width: 600px) {
   .right-content {
-    padding: 30px 15px;
+    padding: 15px;
 
-    h2 { font-size: 1.8rem; }
-    p { font-size: 0.95rem; }
-    button { font-size: 0.9rem; padding: 12px 24px; }
+    h2 { font-size: 1.2rem; }
+    p  { font-size: .85rem; }
+    button { font-size: .9rem; padding: 10px 20px; }
   }
-}
-
-
-::-webkit-scrollbar-track {
-  background: none!important;
-}
-::-webkit-scrollbar-thumb {
-  background: none!important;
-  border-radius: 4px;
 }
