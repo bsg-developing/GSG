@@ -44,7 +44,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 0px;
+        padding: 0 0;
         margin-top: 20px;
         position: relative;
         overflow: hidden;
@@ -53,7 +53,10 @@
         &::before {
           content: '';
           position: absolute;
-          inset: 0;
+          left: 0;
+          bottom: 0; /* если подчеркивание должно быть снизу */
+          height: 100%; /* или 2px, если нужно именно подчеркнуть, а не фон */
+          width: 88%; /* измените это значение по вкусу, например 80% */
           background-color: var(--highlight-color);
           z-index: -1;
           transform: scaleX(0);
@@ -63,7 +66,9 @@
           border-radius: 2px;
         }
 
-        .highlight__inner {
+
+
+      .highlight__inner {
           display: flex;
           align-items: center;
           gap: 12px;
@@ -144,8 +149,11 @@
         align-items: center;
         gap: 8px;            /* уменьшаем промежуток */
         margin-top: 12px;
+        &::before {
+          width: 105%;
+        }
 
-        /* уменьшаем размер логотипа */
+          /* уменьшаем размер логотипа */
         .highlight__logo {
           width: 40px;
         }

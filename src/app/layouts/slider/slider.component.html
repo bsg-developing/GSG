@@ -1,4 +1,4 @@
-<div #container class="fullpage-container" (scroll)="onScroll()">
+<div class="fullpage-container">
   <section
     *ngFor="let slide of slides; let i = index"
     class="section"
@@ -14,7 +14,7 @@
   </section>
 </div>
 
-<div class="scroll-nav">
+<!--<div class="scroll-nav">
   <ul>
     <li
       *ngFor="let slide of slides; let i = index"
@@ -23,4 +23,4 @@
       {{ i + 1 }}
     </li>
   </ul>
-</div>
+</div>-->
