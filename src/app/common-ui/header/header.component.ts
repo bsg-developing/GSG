@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {ClickOutsideDirective} from '../click-outside.directive';
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
@@ -11,7 +11,7 @@ import {NgForOf, NgIf, UpperCasePipe} from '@angular/common';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
   public menuOpen = false;
   languages: Language[] = [
     {code: 'en', name: 'English', flag: 'https://flagcdn.com/w40/gb.png'},
@@ -23,12 +23,12 @@ export class HeaderComponent {
   public router = inject(Router);
   private translocateService = inject(TranslocoService);
 
-  constructor() {
-    if (typeof window !== 'undefined' && window.localStorage) {
+  constructor() {}
+
+  ngOnInit() {
       const lang = localStorage.getItem('lang') || 'ro';
       this.selectedLanguage = lang;
       this.translocateService.setActiveLang(lang);
-    }
   }
   public toggleMenu() {
     this.menuOpen = !this.menuOpen;
