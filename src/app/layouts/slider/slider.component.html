@@ -1,4 +1,5 @@
 <div class="fullpage-container">
+  <h2 class="founders-title">{{'ourServices' | transloco}}</h2>
   <section
     *ngFor="let slide of slides; let i = index"
     class="section"
@@ -7,7 +8,6 @@
     <div class="left-image" [ngStyle]="{ 'background-image': 'url(' + slide.imageUrl + ')' }"></div>
 
     <div class="right-content">
-      <p class="label">{{'ourServices' | transloco}}</p>
       <h2>{{ slide.titleKey | transloco }}</h2>
       <p>{{ slide.textKey | transloco }}</p>
     </div>
