@@ -36,12 +36,14 @@
 
 
 .founder-card img {
+  padding: 10px;
   display: block;
   width: 180px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #F2F1EF;
 }
 
 .card1 .name {

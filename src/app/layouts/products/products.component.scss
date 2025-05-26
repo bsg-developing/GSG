@@ -71,18 +71,6 @@
           padding-left: 20px;
           margin-bottom: 15px;
           position: relative;
-
-          &::before {
-            content: '+';
-            position: absolute;
-            left: 0;
-            color:#f87b00;
-          }
-        }
-
-        &:nth-of-type(2) li::before {
-          content: '–';
-          color: #f87b00;
         }
       }
     }
@@ -91,7 +79,18 @@
   &__footer {
     text-align: center;
     margin: 40px 0;
-
-
   }
+}
+li.positive::before {
+  content: '+';
+  color: #00aa55;
+  position: absolute;
+  left: -4px;
+}
+
+li.negative::before {
+  content: '–';
+  color: #f87b00;
+  position: absolute;
+  left: -4px;
 }

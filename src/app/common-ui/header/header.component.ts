@@ -2,12 +2,12 @@ import {Component, inject, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {ClickOutsideDirective} from '../click-outside.directive';
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
-import {NgForOf, NgIf, UpperCasePipe} from '@angular/common';
+import {NgIf, UpperCasePipe} from '@angular/common';
 
 
 @Component({
   selector: 'app-header',
-  imports: [ClickOutsideDirective, TranslocoPipe, UpperCasePipe, NgIf, NgForOf],
+  imports: [ClickOutsideDirective, TranslocoPipe, UpperCasePipe, NgIf],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
