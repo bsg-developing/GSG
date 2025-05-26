@@ -101,3 +101,29 @@
 
 }
 
+.contact-block--legal {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #3ECFCF;
+  padding: 12px 20px;
+  border-radius: 6px;
+}
+
+.contact-block--legal .contact-label {
+  color: #3ECFCF;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.contact-block--office .contact-label {
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.contact-address {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  color: #d0dad3;
+}
