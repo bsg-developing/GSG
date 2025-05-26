@@ -21,5 +21,14 @@
     "text6": "- Oferim suport cuprinzător pentru fiecare tip de proiect acoperind toate etapele, de la faza inițială de proiectare și planificare până la implementarea operațională. Serviciile noastre asigură o execuție fără probleme și o implementare de succes adaptate cerințelor specifice ale fiecărui proiect."
   },
   "ourServices": "SERVICIILE NOASTRE",
-  "hero-btn": "Afla mai multe"
+  "hero-btn": "Afla mai multe",
+  "Advantages": "Avantaje",
+  "disadvantage":"Dezavantaje",
+  "water-description": "Pompa de căldură apă-apă este unul dintre cele mai eficiente sisteme de încălzire. Factorul cheie pentru o eficiență ridicată constă în sursa de energie, de fapt, în apa freatică pe care o folosește acest dispozitiv.",
+  "heat": "La fel ca toate celelalte pompe de căldură, pompa de căldură sol/apă funcționează pe același principiu: În primul rând, energia termică este extrasă din sol și apoi transferată la agentul frigorific. Acesta se evaporă și este comprimat suplimentar cu ajutorul unui compresor. Acest lucru îi crește nu numai presiunea, ci și temperatura. Căldura rezultată este absorbită de un schimbător de căldură (condensator) și transmisă mai departe către sistemul de încălzire.",
+  "air" : "Pompă de căldură aer/apă aduce căldura din aerul ambiant în încăpere. Mai exact, un ventilator aspiră în mod activ aerul ambiant și îl transferă către un schimbător de căldură cu aer (evaporator) încorporat în pompa de căldură. În interiorul acestuia se află un agent frigorific în circulație, care își schimbă starea fizică la temperaturi scăzute și se evaporă. Pentru a ridica acești vapori de agent frigorific la un nivel care poate fi utilizat pentru încălzire și pentru încălzirea apei calde menajere, aceștia sunt comprimați cu ajutorul unui compresor.",
+  "Heat-pump": "Pompa de căldura",
+  "ww" : "Apă—Apă",
+  "ew": "Sol—Apă",
+  "aw": "Aer—Apă"
 }

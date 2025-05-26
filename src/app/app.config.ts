@@ -48,3 +48,9 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay())
   ]
 };
+
+function getDefaultLang() {
+  return (typeof window !== 'undefined' && localStorage.getItem('lang'))
+    ? localStorage.getItem('lang') as string
+    : 'ro';
+}

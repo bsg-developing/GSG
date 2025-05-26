@@ -36,11 +36,13 @@
     gap: 20px;
 
     h1 {
-      font-size: 3rem;
+      font-size: 32px;
+      letter-spacing: 4px;
       line-height: 1.2;
       margin: 0;
 
       span.highlight {
+        font-size: 42px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -90,7 +92,7 @@
     }
 
     p {
-      font-size: 1.9rem;
+      font-size: 18px;
       line-height: 1.5;
       color: var(--text-color);
       margin: 0;
@@ -133,6 +135,7 @@
   }
 }
 
+/*
 @media (max-width: 768px) {
   .hero {
     padding: 20px;
@@ -143,22 +146,22 @@
       font-size: 1rem;
 
       span.highlight {
-        /* переключаемся на колоночный режим или разрешаем перенос */
+        !* переключаемся на колоночный режим или разрешаем перенос *!
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 8px;            /* уменьшаем промежуток */
+        gap: 8px;            !* уменьшаем промежуток *!
         margin-top: 12px;
         &::before {
           width: 105%;
         }
 
-          /* уменьшаем размер логотипа */
+          !* уменьшаем размер логотипа *!
         .highlight__logo {
           width: 40px;
         }
 
-        /* подгоняем текст */
+        !* подгоняем текст *!
         .highlight__text {
           font-size: 1.2rem;
           text-align: center;
@@ -171,6 +174,57 @@
       font-size: 1rem;
       margin-top: 0.8rem;
       width: auto;
+    }
+  }
+}
+*/
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .hero__content {
+    h1 {
+      font-size: 1.2rem;
+
+      span.highlight {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 12px;
+
+        &::before {
+          width: 100%;
+        }
+
+        .highlight__inner {
+          padding: 0;
+          align-items: center;
+          gap: 4px;
+          max-width: 100%;
+          text-align: center;
+          word-break: break-word; /* перенос длинных слов */
+
+          .highlight__logo {
+            width: 40px;
+          }
+
+          .highlight__text {
+            font-size: 1rem;
+            white-space: normal; /* разрешаем перенос */
+            text-wrap: balance;
+          }
+        }
+      }
+    }
+
+    .hero-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      margin-top: 0.8rem;
+      width: 100%;
+      max-width: 250px;
     }
   }
 }
