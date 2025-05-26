@@ -35,5 +35,46 @@
   "Heat-pump": "Heat pump",
   "ww" : "Water-Water",
   "ew": "Soil—Water",
-  "aw": "Air-Water"
+  "aw": "Air-Water",
+  "products-list": {
+    "product-desc-1": "easy integration with existing fuel-based heating systems;\n\n",
+    "product-desc-2": "also provides domestic hot water;\n\n",
+    "product-desc-3": "does not require an external collector or drilling;\n\n",
+    "product-desc-4": "heat is drawn from the outside air;\n\n",
+    "product-desc-5": "low investment cost;\n\n",
+    "product-desc-6": "easy installation;\n\n",
+    "product-desc-7": "does not require authorization;\n\n",
+    "product-desc-8": "suitable even for buildings with limited space;\n\n",
+    "product-desc-9": "short heating time;\n\n",
+    "product-desc-10": "minimal maintenance.\n\n\n\n\n\n\n\n\n",
+    "product-desc-11": "the house needs to be well insulated to prevent heat loss through walls and roof;\n\n",
+    "product-desc-12":"performance coefficient is significantly lower compared to ground-to-water or water-to-water heat pumps;\n\n",
+    "product-desc-13": "requires electricity for operation (in the absence of access to solar or wind energy);\n\n",
+    "product-desc-14": "noise similar to that of an air conditioner during operation.\n\n\n\n\n\n\n\n\n",
+    "product-desc-15":"use of geothermal energy;\n\n",
+    "product-desc-16": "maintaining a constant temperature in the system due to excavations in the Earth's crust (the ground maintains about 12°C year-round, regardless of season);\n\n",
+    "product-desc-17":"compatible with any type of heating system: underfloor, wall, or radiator heating;\n\n",
+    "product-desc-18": "very low maintenance costs;\n\n",
+    "product-desc-19":"minimal environmental impact;\n\n",
+    "product-desc-20": "also provides cooling during warm seasons;\n\n",
+    "product-desc-21":"does not require regular inspections like traditional boilers;\n\n",
+    "product-desc-22": "safety;\n\n\n\n\n\n\n\n\n",
+    "product-desc-23":"high cost at the investment stage;\n\n",
+    "product-desc-24": "requires authorization for legal entities.\n\n\n\n\n\n\n\n\n",
+    "product-desc-25":"high efficiency and very high performance;\n\n",
+    "product-desc-26": "investment payback period of less than 5 years (for a family home);\n\n",
+    "product-desc-27":"does not require deep drilling or large trenches;\n\n",
+    "product-desc-28": "low energy consumption (only a small amount of electricity is needed, the rest comes from natural heat in the water source);\n\n",
+    "product-desc-29":"uses a renewable and non-polluting energy source;\n\n",
+    "product-desc-30":"compatible with various heating systems (gas boiler, solar heating system);\n\n",
+    "product-desc-31": "also provides cooling, especially passive cooling (no need for air conditioning);\n\n",
+    "product-desc-32":"silent operation and long lifespan;\n\n",
+    "product-desc-33": "requires a water source as close to the surface as possible;\n\n",
+    "product-desc-34":"occasional maintenance is needed (well desanding, submersible pump replacements);\n\n",
+    "product-desc-35": "in some cases, the return well cannot absorb the full volume of injected water;\n\n",
+    "product-desc-36":"authorization is required for the execution of the work in the case of legal entities.\n\n\n\n\n\n\n\n\n"
+
+
+
+  }
 }

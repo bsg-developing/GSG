@@ -80,7 +80,11 @@
           }
         }
 
-        &:nth-of-type(2) li::before {
+      /*  &:nth-of-type(2) li::before {
+          content: '–';
+          color: #f87b00;
+        }*/
+        .heat-pump__col:nth-child(2) ul li::before {
           content: '–';
           color: #f87b00;
         }
@@ -94,4 +98,8 @@
 
 
   }
+}
+.heat-pump__list--negative li::before {
+  content: '–';
+  color: #f87b00;
 }
