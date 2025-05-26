@@ -2,8 +2,8 @@
   background: #fff;
 
   &__top {
-    background: #1b2d2a;
-    color: white;
+    background: #F2F1EF;
+    color: black;
     display: flex;
     justify-content: space-between;
     padding: 60px 40px;
@@ -50,7 +50,7 @@
     display: flex;
     justify-content: center;
     gap: 60px;
-    padding: 20px;
+    padding: 40px;
     flex-wrap: wrap;
 
     .heat-pump__col {
@@ -69,15 +69,14 @@
 
         li {
           padding-left: 20px;
-          margin-bottom: 10px;
+          margin-bottom: 15px;
           position: relative;
 
           &::before {
             content: '+';
             position: absolute;
             left: 0;
-            color: #3ECFCF;
-            font-weight: bold;
+            color:#f87b00;
           }
         }
 

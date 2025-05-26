@@ -26,5 +26,14 @@
     "text6": "We offer comprehensive support for every type of project, covering all stages from initial design and planning to full operational implementation. Our services ensure smooth execution and successful implementation tailored to each project's specific needs."
   },
   "ourServices": "OUR SERVICES",
-  "hero-btn": "Learn more"
+  "hero-btn": "Learn more",
+  "Advantages": "Advantages",
+  "disadvantage":"Disadvantage",
+  "water-description": "The water-to-water heat pump is one of the most efficient heating systems. The key factor for its high efficiency lies in the energy source — specifically, the groundwater it uses.",
+  "heat" : "Just like all other heat pumps, the ground-to-water heat pump operates on the same principle: First, thermal energy is extracted from the ground and then transferred to the refrigerant. The refrigerant evaporates and is further compressed by a compressor. This increases not only its pressure but also its temperature. The resulting heat is absorbed by a heat exchanger (condenser) and transferred to the heating system.",
+  "air" : "The air-to-water heat pump brings heat from the ambient air into the room. More precisely, a fan actively draws in the ambient air and transfers it to an air heat exchanger (evaporator) built into the heat pump. Inside it, a circulating refrigerant changes its physical state at low temperatures and evaporates. To raise these refrigerant vapors to a level that can be used for heating and for domestic hot water, they are compressed using a compressor.",
+  "Heat-pump": "Heat pump",
+  "ww" : "Water-Water",
+  "ew": "Soil—Water",
+  "aw": "Air-Water"
 }
