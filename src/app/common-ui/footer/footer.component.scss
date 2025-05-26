@@ -1,6 +1,6 @@
 .site-footer {
-  background-color: #142923;
-  color: #ffffff;
+  background-color:  #F2F1EF;
+  color: black;
   padding: 60px 30px 30px;
   font-family: sans-serif;
 }
@@ -30,7 +30,7 @@
 .footer-desc {
   font-size: 16px;
   line-height: 1.5;
-  color: #bfc9c1;
+  color: black;
 }
 
 .footer-contacts {
@@ -55,7 +55,7 @@
 
 .contact-link {
   font-size: 16px;
-  color: #ffffff;
+  color: black;
   text-decoration: none;
   margin-bottom: 4px;
 }
@@ -102,7 +102,7 @@
 }
 
 .contact-block--legal {
-  background-color: rgba(255, 255, 255, 0.05);
+  color: black;
   border-left: 4px solid #3ECFCF;
   padding: 12px 20px;
   border-radius: 6px;
@@ -117,7 +117,7 @@
 }
 
 .contact-block--office .contact-label {
-  color: #ffffff;
+  color: black;
   opacity: 0.6;
 }
 
@@ -125,5 +125,5 @@
   font-size: 14px;
   line-height: 1.4;
   margin-bottom: 6px;
-  color: #d0dad3;
+  color: black;
 }
