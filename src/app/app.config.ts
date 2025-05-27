@@ -28,7 +28,8 @@ export const appConfig: ApplicationConfig = {
         };
       },
       deps: [TransferState]
-    },    provideRouter(
+    },
+    provideRouter(
       routes,
       withInMemoryScrolling({
         anchorScrolling: 'enabled',
@@ -49,8 +50,3 @@ export const appConfig: ApplicationConfig = {
   ]
 };
 
-function getDefaultLang() {
-  return (typeof window !== 'undefined' && localStorage.getItem('lang'))
-    ? localStorage.getItem('lang') as string
-    : 'ro';
-}
