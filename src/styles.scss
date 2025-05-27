@@ -1,7 +1,4 @@
 @import "assets/css/normalize.css";
-/*
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Exo+2:wght@600;700&display=swap');
-*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root{
@@ -13,10 +10,6 @@
   --focus-hover-color: #37393B;
 
   --button-hover-color: #2f3030;
-
-  /*
-  --text-color: #fff;
-  */
   --text-secondary-color: #D8D8D8;
   --heading-secondary-color: #444746;
   --placeholder-color: #ABAFB3;
@@ -59,18 +52,23 @@ app-header {
   z-index: 100;
 }
 
-
 [id] {
   position: relative;
 }
-
 [id]::before {
   content: "";
   display: block;
-  height: 80px;           /* высота шапки */
-  margin-top: -80px;      /* компенсирует поднятие */
+  height: 80px;
+  margin-top: -80px;
   visibility: hidden;
 }
 #slider {
-  scroll-margin-top: 180px!important;
+  scroll-padding-top: 80px;
+}
+
+
+#about-us,
+#team,
+#products {
+  scroll-margin-top: 80px;
 }
