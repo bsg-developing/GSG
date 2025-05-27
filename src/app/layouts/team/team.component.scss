@@ -4,6 +4,7 @@
   align-items: center;
   padding: 100px 20px;
   box-sizing: border-box;
+
 }
 
 .founders-title {
@@ -12,6 +13,8 @@
   color: #1f2a26;
   text-align: center;
   margin-bottom: 40px;
+  background: #F2F1EF;
+  width: 100%;
 }
 
 .founders-images {
@@ -24,13 +27,15 @@
 .founders-images img {
   cursor: pointer;
   width: 180px;
-  height: auto;
+  height: 180px;              /* фиксируем одинаковую высоту */
+  object-fit: contain;        /* сохраняет пропорции, помещая весь логотип */
   border-radius: 8px;
   background: #F2F1EF;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .founders-images img:hover {
   transform: translateY(-4px) scale(1.05);

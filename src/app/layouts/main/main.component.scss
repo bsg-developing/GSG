@@ -38,44 +38,35 @@
     h1 {
       font-size: 32px;
       letter-spacing: 4px;
-      line-height: 1.2;
+      line-height: 1.7;
       margin: 0;
 
       span.highlight {
-        font-size: 42px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 0;
-        margin-top: 20px;
+        display: inline-flex;
         position: relative;
         overflow: hidden;
-        color: var(--text-color);
+        padding: 0 12px 0 0;    // ← только padding-right, padding-left = 0
 
         &::before {
           content: '';
           position: absolute;
-          left: 0;
-          bottom: 0; /* если подчеркивание должно быть снизу */
-          height: 100%; /* или 2px, если нужно именно подчеркнуть, а не фон */
-          width: 88%; /* измените это значение по вкусу, например 80% */
+          inset: 0;
           background-color: var(--highlight-color);
           z-index: -1;
           transform: scaleX(0);
-          transform-origin: left;
+          transform-origin: center;
           animation: fillBackground 1s ease-out forwards;
           animation-delay: 1s;
-          border-radius: 2px;
         }
 
-
-
-      .highlight__inner {
+        .highlight__inner {
           display: flex;
           align-items: center;
-          gap: 12px;
+          gap: 12px;            // отступ между логотипом и текстом
 
-          .highlight__logo {
+
+
+      .highlight__logo {
             width: 60px;
             background: #F2F1EF;
             height: auto;
@@ -131,53 +122,11 @@
 
 @keyframes fillBackground {
   to {
-    transform: scaleX(1);
+    transform:scaleX(1);
   }
 }
 
-/*
-@media (max-width: 768px) {
-  .hero {
-    padding: 20px;
-  }
 
-  .hero__content {
-    h1 {
-      font-size: 1rem;
-
-      span.highlight {
-        !* переключаемся на колоночный режим или разрешаем перенос *!
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;            !* уменьшаем промежуток *!
-        margin-top: 12px;
-        &::before {
-          width: 105%;
-        }
-
-          !* уменьшаем размер логотипа *!
-        .highlight__logo {
-          width: 40px;
-        }
-
-        !* подгоняем текст *!
-        .highlight__text {
-          font-size: 1.2rem;
-          text-align: center;
-        }
-      }
-    }
-
-    .hero-btn {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      margin-top: 0.8rem;
-      width: auto;
-    }
-  }
-}
-*/
 @media (max-width: 768px) {
   .hero {
     padding: 20px;
