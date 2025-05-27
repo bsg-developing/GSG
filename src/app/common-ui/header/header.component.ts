@@ -1,8 +1,8 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, Inject, inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {Router} from '@angular/router';
 import {ClickOutsideDirective} from '../click-outside.directive';
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
-import {NgIf, UpperCasePipe} from '@angular/common';
+import {isPlatformBrowser, NgIf, UpperCasePipe} from '@angular/common';
 
 
 @Component({
@@ -13,23 +13,30 @@ import {NgIf, UpperCasePipe} from '@angular/common';
 })
 export class HeaderComponent implements OnInit{
   public menuOpen = false;
-  languages: Language[] = [
-    {code: 'en', name: 'English', flag: 'https://flagcdn.com/w40/gb.png'},
-    {code: 'ru', name: 'Русский', flag: 'https://flagcdn.com/w40/ru.png'},
-    {code: 'ro', name: 'Română', flag: 'https://flagcdn.com/w40/ro.png'},
-  ];
+  public dropdownVisible = false;
   public selectedLanguage!: string;
-  public dropdownVisible: boolean = false;
-  public router = inject(Router);
-  private translocateService = inject(TranslocoService);
 
-  constructor() {}
+  public router = inject(Router);
+  private translocoService = inject(TranslocoService);
+  @Inject(PLATFORM_ID) private platformId!: Object;
+
+  languages: Language[] = [
+    { code: 'en', name: 'English', flag: 'https://flagcdn.com/w40/gb.png' },
+    { code: 'ru', name: 'Русский', flag: 'https://flagcdn.com/w40/ru.png' },
+    { code: 'ro', name: 'Română', flag: 'https://flagcdn.com/w40/ro.png' },
+  ];
 
   ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
       const lang = localStorage.getItem('lang') || 'ro';
       this.selectedLanguage = lang;
-      this.translocateService.setActiveLang(lang);
+      this.translocoService.setActiveLang(lang);
+    } else {
+      this.selectedLanguage = 'ro';
+      this.translocoService.setActiveLang('ro');
+    }
   }
+
   public toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
@@ -43,9 +50,11 @@ export class HeaderComponent implements OnInit{
   }
 
   public setLang(lang: string) {
-    this.translocateService.setActiveLang(lang);
+    this.translocoService.setActiveLang(lang);
     this.selectedLanguage = lang;
-    localStorage.setItem('lang', lang);
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('lang', lang);
+    }
   }
 }
 
@@ -54,4 +63,3 @@ export interface Language {
   name: string;
   flag: string;
 }
-

@@ -1,4 +1,3 @@
-/*
 import { inject, Injectable } from '@angular/core';
 import { Translation, TranslocoLoader } from '@jsverse/transloco';
 import { HttpClient } from '@angular/common/http';
@@ -18,7 +17,9 @@ export class TranslocoHttpLoader implements TranslocoLoader {
     );
   }
 }
-*/import { inject, Injectable } from "@angular/core";
+
+/*
+import { inject, Injectable } from "@angular/core";
 import { Translation, TranslocoLoader } from "@jsverse/transloco";
 import { HttpClient } from "@angular/common/http";
 import {environment} from '../../environments/environment.prod';
@@ -31,3 +32,4 @@ export class TranslocoHttpLoader implements TranslocoLoader {
     return this.http.get<Translation>(`${environment.frontend}/assets/i18n/${lang}.json`);
   }
 }
+*/
