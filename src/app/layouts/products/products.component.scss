@@ -2,16 +2,14 @@
   background: #fff;
 
   &__top {
+    /*
     background: #F2F1EF;
+    */
     color: black;
     display: flex;
     justify-content: space-between;
     padding: 60px 40px;
     flex-wrap: wrap;
-    background-image: url("https://mirgeoenergy.com/wp-content/uploads/2024/01/Shapes-1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top left;
 
     & > div {
       flex: 1;
@@ -39,10 +37,6 @@
       object-fit: contain;
       max-width: 55%;
       height: 500px;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      filter: contrast(1.2) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
-
     }
   }
 
@@ -93,4 +87,13 @@ li.negative::before {
   color: #f87b00;
   position: absolute;
   left: -4px;
+}
+.founders-title {
+  font-size: 32px;
+  line-height: 1.2;
+  color: #1f2a26;
+  text-align: center;
+  margin-bottom: 40px;
+  background: #F2F1EF;
+
 }
