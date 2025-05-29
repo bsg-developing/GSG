@@ -6,11 +6,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; // на мобильных: контент над картинкой
+    flex-wrap: wrap;
+    gap: 20px;
+
+    // На очень узких экранах — один под другим
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__content {
-    flex: 1 1 350px; // минимум 350px, затем растягивается
+    flex: 1 1 350px;
     max-width: 600px;
     padding-right: 20px;
 
@@ -27,17 +33,38 @@
   }
 
   &__image {
-    text-align: center;
-    margin: -12px auto;
+    // гибкая ширина до 700px или 40% контейнера
+    flex: 1 1 40%;
+    max-width: 700px;
+    // сохраняем соотношение сторон 16:9
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // на мобильных — картинка во весь контейнер
+    @media (max-width: 768px) {
+      flex: 1 1 100%;
+      margin-top: 20px;
+      aspect-ratio: auto; // высота подстраивается под картинку
+      height: auto;
+    }
 
     img {
-      max-height: max-content;
-      object-fit: contain;
-      max-width: 55%;
-      height: 500px;
+      width: 100%;
+      height: 100%;
+      object-fit: initial;
+      object-position: center;
     }
   }
 }
+@media (max-width: 768px) {
+  .heat-pump {
+    &__title, .heat-pump__title {
+      font-size: 1.5rem;       // вместо 2.5rem
+    }
+  }}
 
 li.positive::before {
   content: '+';
