@@ -62,13 +62,30 @@ app-header {
   margin-top: -80px;
   visibility: hidden;
 }
-#slider {
-  scroll-padding-top: 80px;
+
+.founders-title {
+  display: block;
+  width: 100%;
+  background: #F2F1EF;
+  box-sizing: border-box;    // чтобы padding учитывался в 100% ширины
+  padding: 20px 40px;        // 20px сверху/снизу, 10px слева/справа
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2a26;
+  text-align: start;
 }
+@media (max-width: 768px) {
+  .founders-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 
 
-#about-us,
-#team,
-#products {
-  scroll-margin-top: 80px;
 }
+
+@media (max-width: 768px) {
+  .heat-pump {
+    &__title, .heat-pump__title {
+      font-size: 1.5rem;       // вместо 2.5rem
+    }
+  }}

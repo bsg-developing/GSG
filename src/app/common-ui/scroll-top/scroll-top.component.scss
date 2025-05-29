@@ -68,13 +68,19 @@
 }
 
 .scroll-top-wrapper .label {
-  margin-bottom:50px;
+  margin-bottom: 70px;
   font-size: 12px;
   letter-spacing: 2px;
   color: #FFBF36;
   white-space: nowrap;
   transform: rotate(-90deg);
   transform-origin: center;
-  /* Разрешаем клики по надписи (если нужно) */
   pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .scroll-top-wrapper .label,
+    .scroll-top {
+  display: none;
+  }
 }
