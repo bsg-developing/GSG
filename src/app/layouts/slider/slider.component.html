@@ -1,94 +1,77 @@
-<div class="fullpage-container">
-  <h2 class="founders-title">{{'ourServices' | transloco}}</h2>
-<!--  <section
-    *ngFor="let slide of slides; let i = index"
-    class="section"
-    [id]="slide.id">
+<h2 class="founders-title">{{ 'ourServices' | transloco }}</h2>
 
-    <div class="left-image" [ngStyle]="{ 'background-image': 'url(' + slide.imageUrl + ')' }"></div>
-
-    <div class="right-content">
-      <h2>{{ slide.titleKey | transloco }}</h2>
-      <p>{{ slide.textKey | transloco }}</p>
-    </div>
-  </section>-->
-</div>
 
 <section class="heat-pump">
-  <div class="heat-pump__top">
-    <div class="heat-pump__left">
-      <h2 class="heat-pump__title">{{'slider.title1'| transloco}}</h2>
+  <div class="heat-pump__wrapper">
+    <div class="heat-pump__content">
+      <h2 class="heat-pump__title">{{ 'slider.title1' | transloco }}</h2>
+      <p class="heat-pump__desc"  [innerHTML]="'slider.text1' | transloco"></p>
     </div>
-    <div class="heat-pump__right">
-      <p class="heat-pump__desc">{{'slider.text1' | transloco}}</p>
+    <div class="heat-pump__image">
+      <img src="assets/images/slider/1.png" alt="Pompa de căldură">
     </div>
   </div>
-  <div class="heat-pump__image">
-    <img src="assets/images/slider/1.png" alt="Pompa de căldură">
+</section>
+
+<section class="heat-pump">
+  <div class="heat-pump__wrapper">
+    <div class="heat-pump__content">
+      <h2 class="heat-pump__title"
+          [innerHTML]="'slider.title2' | transloco">
+      </h2>
+      <p class="heat-pump__desc"  [innerHTML]="'slider.text2' | transloco"></p>
+    </div>
+    <div class="heat-pump__image">
+      <img src="assets/images/MyCollages.jpg" alt="Pompa de căldură">
+    </div>
+  </div>
+</section>
+
+<section class="heat-pump">
+  <div class="heat-pump__wrapper">
+    <div class="heat-pump__content">
+      <h2 class="heat-pump__title"
+          [innerHTML]="'slider.title3' | transloco">
+      </h2>
+      <p class="heat-pump__desc"  [innerHTML]="'slider.text3' | transloco"></p>
+    </div>
+    <div class="heat-pump__image">
+      <img src="assets/images/slider/3.png" alt="Pompa de căldură">
+    </div>
   </div>
 </section>
 <section class="heat-pump">
-  <div class="heat-pump__top">
-    <div class="heat-pump__left">
-      <h2 class="heat-pump__title">{{'slider.title2'| transloco}}</h2>
+  <div class="heat-pump__wrapper">
+    <div class="heat-pump__content">
+      <h2 class="heat-pump__title">{{ 'slider.title4'| transloco }}</h2>
+      <p class="heat-pump__desc">{{ 'slider.text4' | transloco }}</p>
     </div>
-    <div class="heat-pump__right">
-      <p class="heat-pump__desc">{{'slider.text2' | transloco}}</p>
+    <div class="heat-pump__image">
+      <img src="assets/images/slider/slide.jpg" alt="Pompa de căldură">
     </div>
-  </div>
-  <div class="heat-pump__image">
-    <img src="assets/images/slider/img.png" alt="Pompa de căldură">
   </div>
 </section>
 <section class="heat-pump">
-  <div class="heat-pump__top">
-    <div class="heat-pump__left">
-      <h2 class="heat-pump__title">{{'slider.title3'| transloco}}</h2>
+  <div class="heat-pump__wrapper">
+    <div class="heat-pump__content">
+      <h2 class="heat-pump__title">{{ 'slider.title5'| transloco }}</h2>
+      <p class="heat-pump__desc">{{ 'slider.text5' | transloco }}</p>
     </div>
-    <div class="heat-pump__right">
-      <p class="heat-pump__desc">{{'slider.text3' | transloco}}</p>
+    <div class="heat-pump__image">
+      <img src="assets/images/slider/11.png" alt="Pompa de căldură">
     </div>
-  </div>
-  <div class="heat-pump__image">
-    <img src="assets/images/slider/3.png" alt="Pompa de căldură">
   </div>
 </section>
 <section class="heat-pump">
-  <div class="heat-pump__top">
-    <div class="heat-pump__left">
-      <h2 class="heat-pump__title">{{'slider.title4'| transloco}}</h2>
+  <div class="heat-pump__wrapper">
+    <div class="heat-pump__content">
+      <h2 class="heat-pump__title">{{ 'slider.title6'| transloco }}</h2>
+      <p class="heat-pump__desc">{{ 'slider.text6' | transloco }}</p>
     </div>
-    <div class="heat-pump__right">
-      <p class="heat-pump__desc">{{'slider.text4' | transloco}}</p>
+    <div class="heat-pump__image">
+      <img src="assets/images/bg-img.jpg" alt="Pompa de căldură">
     </div>
-  </div>
-  <div class="heat-pump__image">
-    <img src="assets/images/slider/slide.jpg" alt="Pompa de căldură">
   </div>
 </section>
-<section class="heat-pump">
-  <div class="heat-pump__top">
-    <div class="heat-pump__left">
-      <h2 class="heat-pump__title">{{'slider.title5'| transloco}}</h2>
-    </div>
-    <div class="heat-pump__right">
-      <p class="heat-pump__desc">{{'slider.text5' | transloco}}</p>
-    </div>
-  </div>
-  <div class="heat-pump__image">
-    <img src="assets/images/slider/11.png" alt="Pompa de căldură">
-  </div>
-</section>
-<section class="heat-pump">
-  <div class="heat-pump__top">
-    <div class="heat-pump__left">
-      <h2 class="heat-pump__title">{{'slider.title6'| transloco}}</h2>
-    </div>
-    <div class="heat-pump__right">
-      <p class="heat-pump__desc">{{'slider.text6' | transloco}}</p>
-    </div>
-  </div>
-  <div class="heat-pump__image">
-    <img src="assets/images/bg-img.jpg" alt="Pompa de căldură">
-  </div>
-</section>
+
+

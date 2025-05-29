@@ -1,15 +1,24 @@
+<div class="fullpage-container">
+  <h2 class="founders-title">{{ 'about-us' | transloco }}</h2>
+</div>
+
 <div class="container">
   <div class="images-container">
-    <img src="assets/images/partners/1516834547367.jfif" alt="Фото 1">
-    <img src="assets/images/partners/img.png" alt="Фото 1">
+    <figure class="partner">
+      <img src="assets/images/partners/1516834547367.jfif" alt="Иван Иванов">
+      <figcaption>Iurie Dimcea</figcaption>
+    </figure>
+    <figure class="partner">
+      <img src="assets/images/partners/img.png" alt="Мария Петрова">
+      <figcaption>Mihail Miscoi</figcaption>
+    </figure>
   </div>
 
   <div class="content-wrapper">
-    <h2>{{'about-us' | transloco}}</h2>
     <div class="text-container">
-      <span>{{'about-us-bloc-3' | transloco}}</span>
-      <span>{{'about-us-bloc-1' | transloco}}</span>
-      <span>{{'about-us-bloc-2' | transloco}}</span>
+      <span>{{ 'about-us-bloc-3' | transloco }}</span>
+      <span>{{ 'about-us-bloc-1' | transloco }}</span>
+      <span>{{ 'about-us-bloc-2' | transloco }}</span>
     </div>
   </div>
 </div>
